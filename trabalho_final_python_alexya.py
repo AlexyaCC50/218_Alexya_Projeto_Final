@@ -7,7 +7,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
 df = pd.read_csv(r'C:\\Users\\Youth_Space_37\\Desktop\\TRABALHO FINAL\\trabalho_final.csv', encoding='latin1', sep=';', low_memory=False)
-#transformei os dados do power bi pelo excel online, por isso precisei acrescentar o encoding, sep e low memory
+#Transformei os dados do power bi pelo excel online, por isso precisei acrescentar o encoding, sep e low memory
 
 # Verificar valores faltantes
 
@@ -60,7 +60,7 @@ df_encoded_array = oneHotEncoder.fit_transform(df)
 #Recuperar nomes das colunas one-hot
 onehot_columns = oneHotEncoder.named_transformers_['onehot'].get_feature_names_out(input_features=df.columns[categorias])
 
-# Colunas que não foram transformadas
+#Colunas que não foram transformadas
 remainder_cols = [col for i, col in enumerate(df.columns) if i not in categorias]
 
 #Combinar nomes das colunas
