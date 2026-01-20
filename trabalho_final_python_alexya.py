@@ -9,6 +9,8 @@ from sklearn.pipeline import Pipeline
 df = pd.read_csv(r'C:\\Users\\Youth_Space_37\\Desktop\\TRABALHO FINAL\\trabalho_final.csv', encoding='latin1', sep=';', low_memory=False)
 #Transformei os dados do power bi pelo excel online, por isso precisei acrescentar o encoding, sep e low memory
 
+#...Criação do dataset contendo cidade, estado, categoria, valor, frete, datas, tipo de pagamento, número de parcelas, avaliação do cliente
+
 # Verificar valores faltantes
 
 print(df.isnull())
